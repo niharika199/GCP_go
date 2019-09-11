@@ -44,7 +44,7 @@ func (c *Serverdelinput) Deleteserver() {
 
 /*func main() {
 	c := serverinput{
-		Project: "proj-211305",
+		Project: "proj",
 		Name:    "priv",
 		Zone:    "us-east1-b",
 	}

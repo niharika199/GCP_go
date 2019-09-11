@@ -38,7 +38,7 @@ func ListRegions(project string)[]string {
 }
 
 /*func main() {
-	k :=ListRegions("proj-211305")
+	k :=ListRegions("proj")
         for _,y := range k{
               fmt.Println(y)
 }

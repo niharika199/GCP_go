@@ -32,7 +32,7 @@ func (c *Networkdelinput) Deletenetwork() {
 
 /*func main() {
 	c := Networkdelinput{
-		Project: "proj-211305",
+		Project: "proj",
 		Name:    "ne1",
 	}
 	c.Deletenetwork()

@@ -102,7 +102,7 @@ func (c *SubnetInput) Createsubnet() {
 }
 /*func main() {
 	 c:= SubnetInput{
-		Project:     "proj-211305",
+		Project:     "proj",
 		Name:        "private",
 		Region:      "us-east1",
 		Network:     "net1",

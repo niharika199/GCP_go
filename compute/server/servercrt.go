@@ -127,8 +127,8 @@ func (c *Serverinput) waitforOP(Name string) (progress bool, err error) {
 
 /*func main() {
 	c := Serverinput{
-		Project:     "proj-211305",
-		Name:        "priv",
+		Project:     "proj",
+		Name:        "name",
 		MachineType: "n1-standard-1",
 		ImageProj:   "rhel-cloud",
 		Imagefamily: "rhel-7",
@@ -136,8 +136,8 @@ func (c *Serverinput) waitforOP(Name string) (progress bool, err error) {
 		Network:     "default",
 		Subnet:      "private",
 		Region:      "us-east1",
-		User:        "niharika",
-		Pem:         "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAio01LN0IZxGseT80BPLm9U9zy3fcuUvUlnHxf58nb5Rj5UFeRdm8pin/x6gASBbljjdSbAzob0h4cAEfH6lsQu/ozOPD4RPf1IXod5FuISkYW5YVU17/snIbM9ie9cnuOLyeHAlBb0msUJpUXoxIMOKrlRdExgJQTwN762L8VMWYiyR986lHv7Fi1l02OA5AaWjRfKRrLdDDm1Xy9g6R+91v1E3sT46FI66c+rkmF1aqT+370RYm3CtQvAyTuX3ktgMF/6sj7mdKgaZw4ujMehMZ0gUbMDNf+FazQ7j47eMTkCYPIDZsP0ONj0Ov2984+A+6kFM0P7sywn9wDxL76w== niharika",
+		User:        "username",
+		Pem:         "pemkey",
 	}
 	resu := c.createserver()
 	fmt.Printf("%+v\n", resu)

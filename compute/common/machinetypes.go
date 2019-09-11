@@ -39,5 +39,5 @@ func ListMachinetypes(project string, zone string) []string {
 }
 
 /*func main() {
-	listMachinetypes("proj-211305", "us-east1-b")
+	listMachinetypes("proj", "us-east1-b")
 }*/

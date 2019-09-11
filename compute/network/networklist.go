@@ -37,5 +37,5 @@ func Listnws(project string) {
 }
 
 /*func main() {
-	Listnws("proj-211305")
+	Listnws("proj")
 }*/

@@ -46,5 +46,5 @@ func Listservers(proj string, zone string) {
 }
 
 /*func main() {
-	Listservers("proj-211305", "us-east1-b")
+	Listservers("proj", "us-east1-b")
 }*/

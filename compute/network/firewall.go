@@ -51,7 +51,7 @@ func (i *Firewallinput) Firewallcrt() {
 
 /*func main() {
 	input := Firewallinput{
-		Project:    "proj-211305",
+		Project:    "proj",
 		Name:       "testt",
 		Network:    "net1",
 		Priority:   333,
