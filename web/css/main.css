@@ -1,0 +1,163 @@
+ * {
+margin: 0;
+padding: 0;
+font-family: 'Rosario', sans-serif; !important;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+h1 {
+    color: #17375e;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+p {
+  color:#292929;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#96b1cf;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav li {
+  float: left;
+  border-right: 1px solid  #4b5786;
+}
+
+
+nav li:last-child {
+    border-right: none;
+}
+
+nav li a {
+    display: inline-block;
+    color:  #4b5786;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+nav li a:hover {
+    color: #f8f8f8;
+}
+
+.active {
+    background-color:  #f8f8f8;
+    color: #4b5786;
+}
+a.active:hover{
+  color: #4b5786;
+
+}
+
+#container{width:900px;}
+#left{float:left;width:215px;}
+#right{float:right;width:215px;}
+#center{margin:0 auto;width:215px;}
+
+.bg{
+  height: 500px;
+  background-image: url("/img/misc/violin.jpg");
+  background-repeat: no-repeat;
+  background-color: #292929;
+
+}
+.mainbody{
+  padding-top: 75px;
+}
+
+.optionselect{
+
+  color:#292929;
+  margin-left: 50px;
+
+}
+
+.scale {
+  padding-top: 25px;
+  margin-left: 50px;
+  margin-bottom: 5px
+}
+.audio {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  float: left;
+}
+.audio2 {
+  margin-left: 50px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+.audioheader {
+    margin-left: 50px;
+    margin-bottom: 10px;
+    text-align:left;
+    color: #292929;
+}
+.scale1name {
+  position: relative;
+
+}
+
+.scale2name {
+  position: absolute;
+  left: 400px;
+}
+
+.looptext{
+    color: #292929;
+}
+.submit{
+    margin-top: 10px;
+}
+
+.scalearpselect{
+  margin-top: 10px;
+  color: #292929;
+}
+
+.pitchselect{
+  margin-top: 10px;
+  color:#292929;
+}
+
+.keyselect{
+  margin-top: 10px;
+  color:#292929;
+}
+
+.octaveselect{
+  margin-top: 10px;
+  color: #292929;
+}
+
+.indent{
+  margin-left: 30px;
+}
+
+.footer {
+  color:#4b5786;
+  margin-left: 20px;
+
+}
+
+.cleff {
+position: absolute;
+left: 150px;
+top: 70px;
+}
