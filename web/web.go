@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	server "gcp/server"
+	server "github.com/niharika199/GCP_go/server"
 	"github.com/gorilla/mux"
 	"html/template"
 	"log"
