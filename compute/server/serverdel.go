@@ -39,7 +39,7 @@ func (c *Serverdelinput) Deleteserver() {
 		fmt.Println("ERROR:%v", err1)
 	}
 	c.waitforOP(ins.Name)
-	fmt.Println("DELETED THE INSTANCE SUCCESSFULLY") 
+	fmt.Println("DELETED THE INSTANCE SUCCESSFULLY")
 }
 
 /*func main() {

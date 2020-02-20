@@ -100,6 +100,7 @@ func (c *SubnetInput) Createsubnet() {
 
 	//      fmt.Printf("%#v\n", resp)
 }
+
 /*func main() {
 	 c:= SubnetInput{
 		Project:     "proj",

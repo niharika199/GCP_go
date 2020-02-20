@@ -39,11 +39,10 @@ func create(w http.ResponseWriter, r *http.Request) {
 		User:        r.FormValue("User"),
 		Pem:         r.FormValue("Pem"),
 	}
-        fmt.Fprintln(w, "Creating the instance", r.FormValue("Name"))
+	fmt.Fprintln(w, "Creating the instance", r.FormValue("Name"))
 	serverout := input.Createserver()
 	fmt.Fprintln(w, "Created the server")
 	fmt.Fprintln(w, serverout.Name)
 	fmt.Fprintln(w, serverout.PublicIP)
 
 }
-

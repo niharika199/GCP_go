@@ -4,8 +4,10 @@ import (
 	logger "github.com/niharika199/GCP_go/logs"
 	"encoding/json"
 	"fmt"
+
 	network "github.com/niharika199/GCP_go/compute/network"
 	server "github.com/niharika199/GCP_go/compute/server"
+
 	"log"
 	"net/http"
 )
@@ -56,7 +58,6 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	input.Deleteserver()
-	// add the code to handle the error if not found
 	logger.GeneralLogger.Println("deleted the server", input.Name)
 	fmt.Fprintln(w, "deleted the instance")
 }

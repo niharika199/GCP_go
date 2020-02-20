@@ -4,26 +4,26 @@ import (
 	"fmt"
 	"golang.org/x/net/context"
 	compute "google.golang.org/api/compute/v1"
-//	htransport "google.golang.org/api/transport/http"
-       "golang.org/x/oauth2/google"
+	//	htransport "google.golang.org/api/transport/http"
+	"golang.org/x/oauth2/google"
 	"log"
 	"time"
 )
 
 func (c *Serverinput) Createserver() Serveroutput {
 	ctx := context.Background()
-//	client, _, err := htransport.NewClient(ctx)
-//	computeService, err := compute.New(client)
+	//	client, _, err := htransport.NewClient(ctx)
+	//	computeService, err := compute.New(client)
 
-       cl, err := google.DefaultClient(ctx, compute.CloudPlatformScope)
-        if err != nil {
-                log.Fatal(err)
-        }
+	cl, err := google.DefaultClient(ctx, compute.CloudPlatformScope)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-        computeService, err := compute.New(cl)
-        if err != nil {
-                log.Fatal(err)
-        }
+	computeService, err := compute.New(cl)
+	if err != nil {
+		log.Fatal(err)
+	}
 	// Getting the image from their respective project
 	resp, err := computeService.Images.GetFromFamily(c.ImageProj, c.Imagefamily).Context(ctx).Do()
 	if err != nil {
@@ -103,11 +103,11 @@ func (c *Serverinput) Createserver() Serveroutput {
 
 func (c *Serverinput) waitforOP(Name string) (progress bool, err error) {
 	ctx := context.Background()
-//	client, _, err := htransport.NewClient(ctx)
-      cl, err := google.DefaultClient(ctx, compute.CloudPlatformScope)
-        if err != nil {
-                log.Fatal(err)
-        }
+	//	client, _, err := htransport.NewClient(ctx)
+	cl, err := google.DefaultClient(ctx, compute.CloudPlatformScope)
+	if err != nil {
+		log.Fatal(err)
+	}
 	computeService, err := compute.New(cl)
 
 	//looping until the instance operatin progress is 100

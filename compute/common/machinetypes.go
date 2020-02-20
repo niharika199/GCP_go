@@ -1,7 +1,7 @@
-package  region
+package region
 
 import (
-//	"fmt"
+	//	"fmt"
 	"log"
 
 	"golang.org/x/net/context"
@@ -29,13 +29,13 @@ func ListMachinetypes(project string, zone string) []string {
 		for _, machineType := range page.Items {
 			// TODO: Change code below to process each `machineType` resource:
 			fmt.Printf("%#v : %#v\n\n ", machineType.Name, machineType.Description)
-                        Machinetype =append(MachineType,machineType.Name)
-}
+			Machinetype = append(MachineType, machineType.Name)
+		}
 		return nil
 	}); err != nil {
 		log.Fatal(err)
 	}
-      return Machinetype
+	return Machinetype
 }
 
 /*func main() {
