@@ -1,4 +1,0 @@
-Error Logger:	2020/02/19 12:44:39 api.go:60: %s %s %s
- 127.0.0.1:52036 POST /serverdelete
-Error Logger:	2020/02/19 12:47:19 api.go:60: 127.0.0.1:52056 POST /servercreate
-Error Logger:	2020/02/19 12:47:34 api.go:60: 127.0.0.1:52062 POST /serverdelete
