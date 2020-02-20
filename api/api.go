@@ -1,25 +1,24 @@
 package main
 
 import (
+	logger "github.com/niharika199/GCP_go/logs"
 	"encoding/json"
 	"fmt"
-	network "gcp/compute/network"
-	server "gcp/compute/server"
-	"github.com/gorilla/mux"
-	//	"html/template"
+
+	network "github.com/niharika199/GCP_go/compute/network"
+	server "github.com/niharika199/GCP_go/compute/server"
+
 	"log"
 	"net/http"
 )
 
 func main() {
-	r := mux.NewRouter()
-	//	r.HandleFunc("/", welcome)
-	r.HandleFunc("/servercreate", create)
-	r.HandleFunc("/serverdelete", Delete)
-	r.HandleFunc("/networkcreate", netcreate)
-	r.HandleFunc("/networkdelete", netdel)
+	http.HandleFunc("/servercreate", create)
+	http.HandleFunc("/serverdelete", Delete)
+	http.HandleFunc("/networkcreate", netcreate)
+	http.HandleFunc("/networkdelete", netdel)
 	//      r.HandleFunc("/listservers",listservers)
-	if err := http.ListenAndServe(":80", r); err != nil {
+	if err := http.ListenAndServe(":80", logRequest(http.DefaultServeMux)); err != nil {
 		log.Fatal(err)
 	}
 }
@@ -29,6 +28,13 @@ func main() {
 	tmpl.Execute(w, nil)
 }*/
 
+func logRequest(handler http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		logger.RequestLogger.Println(r.RemoteAddr, r.Method, r.URL)
+		handler.ServeHTTP(w, r)
+	})
+}
+
 func create(w http.ResponseWriter, r *http.Request) {
 	defer r.Body.Close()
 	input := server.Serverinput{}
@@ -37,6 +43,7 @@ func create(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	serverout := input.Createserver()
+	logger.GeneralLogger.Println("Created the instance", serverout.Name, serverout.PublicIP)
 	fmt.Fprintln(w, "Created the server")
 	fmt.Fprintln(w, serverout.Name)
 	fmt.Fprintln(w, serverout.PublicIP)
@@ -51,6 +58,7 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	input.Deleteserver()
+	logger.GeneralLogger.Println("deleted the server", input.Name)
 	fmt.Fprintln(w, "deleted the instance")
 }
 
@@ -83,6 +91,4 @@ func netdel(w http.ResponseWriter, r *http.Request) {
                 fmt.Println(w,"Invalid request payload")
                 return
         }
-        output:=input.Createnetwork()
-        fmt.Fprintln(w, "Created the Network",output.name)
 }*/
